@@ -1,0 +1,72 @@
+Redux 이웅재
+
+Redux 개념
+상하위간 데이터통신 > Context API 사용 > 효과적으로 관리 (vue의 store 개념) 
+
+
+
+1. 단일 스토어 만드는 법
+2. 리액트에서 리액트 에서 스토어 사용하는법 익히기
+
+startReact2 / redux-start
+$ npx create-react-app redux-start
+$ npm i redux
+
+@ 액션 ? 객체
+# redux / actions.js
+ 1. 타입
+ 2. 타입 , 그외것
+
+액션생성자
+
+@ Reducer 리듀서
+# redux / reducer.js
+퓨어 / immu ~
+
+@ 스토어
+# redux / sotre.js
+인자 reducer, preloaded, enhancer 
+
+store.getState : 현재 스토어의 스테이트 가져옴
+
+store.dispatch(액션) : 스토어의 상태 변경
+sotre.dispatch(액션생성자) : 스토어의 상태 변경
+const unsubscribe = store.subscribe( () => {})
+  ㄴ 리턴이 unsubscribe 고, unsubscribe() 할 경우 제거
+ : 스토어에 변경이 생겼을때 화살표 함수 내부의 코드 실행
+ :
+store.replaceReducer (다른리듀서) : 원래 가지고 있던 리듀서를 변경 (실무에서 사용 거의 X)
+
+@ 컴바인리듀서즈
+사용이유 : 스토어는 하나만 둘수있기때문에, 규모가 커졌을떄 사용이 불편함.
+todolist 예시에서도 하나의 리듀서로만 만들면 todos 내용과 complete여부에 따라 하나의 처리만 하면 되는것을 모두 써주어야해서 불편함.
+리듀서를 여러개 만들어서 나누고, 컴바인 리듀서로 합칠수있다.
+
+// import { ADD_TODO, COMPLETE_TODO, SHOW_ALL, SHOW_COMPLETE } from "./actions";
+// import { combineReducers } from "redux";
+
+// // 스테이트의 모습을 구상해보아야함
+// // ['코딩', '점심먹기'];
+
+// // 컴바인라듀서즈
+// // [{text: '코딩', done: false}, {text: '점심먹기', done: true}, ]
+
+// // 필터링 추가
+// // {todos: [{text: '코딩', done: false}, {text: '점심먹기', done: true}],
+// //  filter: 'All'}
+
+// const initialState = { todos: [], filter: "ALL" };
+// const todoInitialState = initialState.todos;
+// const filterInitialState = initialState.filter;
+
+// export default reducer;
+
+// // prevState가 undefined일때 initialState로 지정
+
+
+@ 06 리덕스를 리액트에 연결
+
+@ 07 react-redux 연결
+
+$ npm i react-reudx
+
