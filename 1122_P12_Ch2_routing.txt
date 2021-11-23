@@ -1,0 +1,8 @@
+Part12 react로 나의 책장 만들기 (Typescript)
+
+
+$ npx create-react-app my-books --template typescript
+$ npm i react-router-dom
+$ npm i --save-dev @types/react-router-dom
+$ npm i react-error-boundary
+
