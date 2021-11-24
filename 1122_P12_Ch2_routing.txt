@@ -6,3 +6,16 @@ $ npm i react-router-dom
 $ npm i --save-dev @types/react-router-dom
 $ npm i react-error-boundary
 
+$ npm i redux react-redux redux-saga redux-devtools-extension redux-actions
+
+$ npm i --save-dev @types/redux-actions
+
+$ npm i antd
+$ npm i antd/icons
+
+$ npm axios
+
+$ npm i connected-react-router
+https://my-books.vercel.app/bg_signin.png
+
+
